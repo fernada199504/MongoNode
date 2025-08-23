@@ -1,0 +1,26 @@
+<div class="profile-container">
+  <div class="profile-card">
+    <h2>Mi Perfil</h2>
+
+    <!-- Si no hay usuario -->
+    <p *ngIf="!user" class="no-user">Sin datos. Inicia sesión.</p>
+
+    <!-- Datos del usuario -->
+    <div *ngIf="user" class="profile-info">
+      <div class="info-row">
+        <span class="label">Nombre:</span>
+        <span class="value">{{ user.nombre }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Email:</span>
+        <span class="value">{{ user.correo }}</span>
+      </div>
+     <div class="info-row">
+        <span class="label">Rol:</span>
+        <span class="value">{{ user.rol }}</span>
+      </div>
+
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="login-container">
+  <div>
+    <h2>Login</h2>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <label>Correo</label>
+      <input type="correo" formControlName="correo">
+      <div *ngIf="form.get('correo')?.touched && form.get('correo')?.invalid">
+        Email requerido y válido.
+      </div>
+
+      <label>Password</label>
+      <input type="password" formControlName="password">
+      <div *ngIf="form.get('password')?.touched && form.get('password')?.invalid">
+        Mínimo 6 caracteres.
+      </div>
+
+      <button [disabled]="form.invalid || loading">Entrar</button>
+    </form>
+
+    <p *ngIf="error" style="color:red">{{ error }}</p>
+  </div>
+</div>

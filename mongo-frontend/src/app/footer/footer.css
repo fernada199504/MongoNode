@@ -1,0 +1,19 @@
+footer {
+background-color: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;  /* 👈 siempre fijo en la pantalla */
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

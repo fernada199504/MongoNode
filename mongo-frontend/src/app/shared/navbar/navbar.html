@@ -1,0 +1,9 @@
+<nav class="nav">
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Inicio</a>
+  <a routerLink="/posts" routerLinkActive="active">Publicaciones</a>
+  <a routerLink="/profile" routerLinkActive="active" *ngIf="isLoggedIn()">Perfil</a>
+  <span class="spacer"></span>
+  <a routerLink="/login" *ngIf="!isLoggedIn()">Login</a>
+  <a routerLink="/register" *ngIf="!isLoggedIn()">Registro</a>
+  <button (click)="logout()" *ngIf="isLoggedIn()">Salir</button>
+</nav>

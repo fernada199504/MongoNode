@@ -1,0 +1,22 @@
+<div class="post-list-container">
+  <h2>Publicaciones</h2>
+  <button class="reload-btn" (click)="load()">Recargar</button>
+
+  <p *ngIf="isLoading">Cargando publicaciones...</p>
+  <p *ngIf="error" class="error">{{ error }}</p>
+
+  <ul class="post-list" *ngIf="posts.length > 0 && !isLoading; else noPosts">
+    <li class="post-item" *ngFor="let p of posts">
+      <strong>{{ p.title }}</strong>
+      <p>{{ p.content }}</p>
+      <p>Autor: {{ p.author.nombre }}</p>
+      <p>Categoría: {{ p.category.name }}</p>
+      
+       
+    </li>
+  </ul>
+
+  <ng-template #noPosts>
+    <p class="no-posts" *ngIf="!isLoading">No hay publicaciones disponibles.</p>
+  </ng-template>
+</div>

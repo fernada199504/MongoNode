@@ -1,0 +1,60 @@
+.nav {
+  display: flex;
+  align-items: center;
+  background-color: #1e1e2f;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Enlaces */
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.nav a:hover {
+  color: #4dabf7;
+}
+
+.nav a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #4dabf7;
+  padding-bottom: 2px;
+}
+
+/* Botón de salir */
+.nav button {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.nav button:hover {
+  background-color: #d32f2f;
+}
+
+/* Espaciador */
+.spacer {
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .nav a,
+  .nav button {
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+  }
+}

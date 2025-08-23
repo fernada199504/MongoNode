@@ -1,0 +1,60 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* Ajusta según navbar/footer */
+  background-color: #f4f6f8;
+  padding: 2rem;
+}
+
+.profile-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+.profile-card h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.no-user {
+  text-align: center;
+  color: #555;
+  font-size: 16px;
+}
+
+.profile-info .info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  color: #444;
+}
+
+.profile-info .label {
+  font-weight: bold;
+}
+
+.btn-edit {
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.7rem 0;
+  background-color: #007bff; /* mismo color navbar */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.btn-edit:hover {
+  background-color: #0056b3;
+}

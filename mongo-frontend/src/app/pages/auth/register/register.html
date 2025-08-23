@@ -1,0 +1,24 @@
+<div class="register-container">
+  <div>
+    <h2>Registro</h2>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" type="text" formControlName="nombre" placeholder="Escribe tu nombre">
+
+      <label for="correo">Correo</label>
+      <input id="correo" type="email" formControlName="correo" placeholder="ejemplo@correo.com">
+
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" placeholder="Mínimo 6 caracteres">
+
+      <label for="confirm">Confirmar contraseña</label>
+      <input id="confirm" type="password" formControlName="confirm" placeholder="Repite tu contraseña">
+
+      <button type="submit" [disabled]="form.invalid || loading">Crear cuenta</button>
+    </form>
+
+    <p *ngIf="okMsg" style="color:green">{{ okMsg }}</p>
+    <p *ngIf="errMsg" style="color:red">{{ errMsg }}</p>
+  </div>
+</div>
